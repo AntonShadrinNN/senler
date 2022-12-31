@@ -25,8 +25,6 @@ def auth(login: str, password: str):
 def auth_public():
     session = VkApi(
         # токен для API группы
-        token='vk1.a.0H7P4WGxHF4gS8BGq9mRvycMxKFfrdZAdeTpcfdaWFzr2LPbQGvtgZaOwgrFx1kMkolBvBDGSWwf4bcs6ZNldu2d'
-              'D0CrwwhWWoHbdADyHx3j0iTpeNkS_NLDoavrYDnnJLCpDewMn4IarNGNyehcloiHk2QEVXDpTeu3NJxkUD4CLfrOp-efD0D'
-              'bG8ptnwRA1iCASg20LxQJfSjEUKQxIQ')
+        token='#')
 
     return session
