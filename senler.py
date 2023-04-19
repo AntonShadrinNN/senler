@@ -19,4 +19,4 @@ with open('data/students.csv', encoding='utf-8') as file:
         # Если написать в message.txt 'name', то заменится именем ученика
         personal_message = base_message.replace('name', row['name'].split()[0])
         # В img относительный адрес до фотки
-        send(session, row['id'], personal_message, row['name'], img='images/test.jpg')
+        send(session, row['id'], personal_message, row['name'], img='images/XOfinal.jpg')

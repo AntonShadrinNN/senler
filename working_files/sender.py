@@ -1,8 +1,21 @@
 from vk_api import VkUpload
 from vk_api.exceptions import ApiError
 from warnings import warn
+import functools
 
 
+def retry(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        while True:
+            try:
+                return func(*args, **kwargs)
+            except Exception:
+                pass
+    return wrapper
+
+
+@retry
 def send(session, user_id: str, message: str, *args, img=None):
     vk = session.get_api()
     if img:
